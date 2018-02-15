@@ -1,6 +1,6 @@
 # exercice-1
 
-Préparez et exécutez une application personnalisée à l'aide de Docker
+Préparez et exécutez une application personnalisée à l'aide de Docker.
 
 Jetez un oeil au Dockerfile pour cette application, qui crée un simple site Web ASP.NET en cours d'exécution et qui affiche le nom d'hôte du serveur. 
 
