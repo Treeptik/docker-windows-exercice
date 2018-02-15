@@ -6,5 +6,5 @@ Jetez un oeil au Dockerfile pour cette application, qui crée un simple site Web 
 
 Il n'y a que deux instructions:
 * [FROM](https://docs.docker.com/engine/reference/builder/#from) - spécifie l'image à utiliser comme point de départ pour cette image. 
-  Microsoft / aspnet est une image détenue par Microsoft, avec IIS et ASP.NET installé sur Windows Server Core
+  Microsoft / aspnet est une image détenue par Microsoft, avec IIS et ASP.NET installé sur Windows Server Core.
 * [COPY](https://docs.docker.com/engine/reference/builder/#copy) - copie un fichier de l'hôte dans l'image à un emplacement connu.
