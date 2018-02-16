@@ -7,6 +7,8 @@ docker image build -t docker image build -t <dockerId>/example-1 .
 L’image obtenue se compose de trois couches supplémentaires, une pour chaque instruction **RUN**.
 ```
 docker history doc-example-1
+
+
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
 a395ca26777f        15 seconds ago      cmd /S /C powershell.exe -Command Remove-Item   24.56 MB
 6c137f466d28        28 seconds ago      cmd /S /C powershell.exe -Command Start-Proce   178.6 MB
