@@ -1,38 +1,26 @@
-# Optimiser la taille des images
-
-Exécutez **docker image build** pour exécuter les étapes dans le Dockerfile: 
-```
-docker image build -t docker image build -t <dockerId>/example-1 .
-```
-L’image obtenue se compose de trois couches supplémentaires, une pour chaque instruction **RUN**.
-```
-docker history example-1
-
-IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
-a395ca26777f        15 seconds ago      cmd /S /C powershell.exe -Command Remove-Item   24.56 MB
-6c137f466d28        28 seconds ago      cmd /S /C powershell.exe -Command Start-Proce   178.6 MB
-957147160e8d        3 minutes ago       cmd /S /C powershell.exe -Command Invoke-WebR   125.7 MB
-
-```
-Ouvrir votre Dockerfile dans le dossier exercice-0 et remplacer le contenu du fichier par les instructions ci-dessous.
 ```
 # escape=`
 FROM windowsservercore
 
-RUN powershell.exe -Command `
-  $ErrorActionPreference = 'Stop'; `
-  Invoke-WebRequest https://www.python.org/ftp/python/3.5.1/python-3.5.1.exe -OutFile c:\python-3.5.1.exe ; `
-  Start-Process c:\python-3.5.1.exe -ArgumentList '/quiet InstallAllUsers=1 PrependPath=1' -Wait ; `
-  Remove-Item c:\python-3.5.1.exe -Force
+RUN powershell -Command `
+    $ErrorActionPreference = 'Stop'; `
+    wget https://www.apachelounge.com/download/VC11/binaries/httpd-2.4.18-win32-VC11.zip -OutFile c:\apache.zip ; `
+    Expand-Archive -Path c:\apache.zip -DestinationPath c:\ ; `
+    Remove-Item c:\apache.zip -Force
+
+RUN powershell -Command `
+    $ErrorActionPreference = 'Stop'; `
+    wget "https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x86.exe" -OutFile c:\vcredist.exe ; `
+    start-Process c:\vcredist.exe -ArgumentList '/quiet' -Wait ; `
+    Remove-Item c:\vcredist.exe -Force
+
+RUN powershell -Command `
+    $ErrorActionPreference = 'Stop'; `
+    wget http://windows.php.net/downloads/releases/php-5.5.33-Win32-VC11-x86.zip -OutFile c:\php.zip ; `
+    Expand-Archive -Path c:\php.zip -DestinationPath c:\php ; `
+    Remove-Item c:\php.zip -Force
 ```
 Exécutez **docker image build** pour exécuter les étapes dans le Dockerfile: 
 ```
-docker image build -t docker image build -t <dockerId>/example-2 .
-```
-Image obtenue ici se compose d’une couche.
-```
-docker history example-2
-
-IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
-69e44f37c748        54 seconds ago      cmd /S /C powershell.exe -Command   $ErrorAct   216.3 MB  
+docker image build -t docker image build -t <dockerId>/sample-2 .
 ```

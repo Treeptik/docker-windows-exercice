@@ -1,5 +1,22 @@
+# escape=`
 FROM windowsservercore
 
-RUN powershell.exe -Command Invoke-WebRequest "https://www.python.org/ftp/python/3.5.1/python-3.5.1.exe" -OutFile c:\python-3.5.1.exe
-RUN powershell.exe -Command Start-Process c:\python-3.5.1.exe -ArgumentList '/quiet InstallAllUsers=1 PrependPath=1' -Wait
-RUN powershell.exe -Command Remove-Item c:\python-3.5.1.exe -Force
+RUN powershell -Command `
+
+  # Download software ; `
+
+  wget https://www.apachelounge.com/download/VC11/binaries/httpd-2.4.18-win32-VC11.zip -OutFile c:\apache.zip ; `
+  wget "https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x86.exe" -OutFile c:\vcredist.exe ; `
+  wget -Uri http://windows.php.net/downloads/releases/php-5.5.33-Win32-VC11-x86.zip -OutFile c:\php.zip ; `
+
+  # Install Software ; `
+
+  Expand-Archive -Path c:\php.zip -DestinationPath c:\php ; `
+  Expand-Archive -Path c:\apache.zip -DestinationPath c:\ ; `
+  start-Process c:\vcredist.exe -ArgumentList '/quiet' -Wait ; `
+
+  # Remove unneeded files ; `
+
+  Remove-Item c:\apache.zip -Force; `
+  Remove-Item c:\vcredist.exe -Force; `
+  Remove-Item c:\php.zip
