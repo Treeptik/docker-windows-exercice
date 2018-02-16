@@ -25,7 +25,11 @@ RUN powershell.exe -Command `
   Start-Process c:\python-3.5.1.exe -ArgumentList '/quiet InstallAllUsers=1 PrependPath=1' -Wait ; `
   Remove-Item c:\python-3.5.1.exe -Force
 ```
-Image obtenue ici se compose d’une couche
+Exécutez **docker image build** pour exécuter les étapes dans le Dockerfile: 
+```
+docker image build -t docker image build -t <dockerId>/example-2 .
+```
+Image obtenue ici se compose d’une couche.
 ```
 docker history example-2
 
