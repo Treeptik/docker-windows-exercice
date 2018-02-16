@@ -14,7 +14,7 @@ a395ca26777f        15 seconds ago      cmd /S /C powershell.exe -Command Remove
 957147160e8d        3 minutes ago       cmd /S /C powershell.exe -Command Invoke-WebR   125.7 MB
 
 ```
-Ouvrir votre Dockerfile dans le dossier exercice-0 et remplacer le contenu du fichier par les instructions ci-dessous.
+Ouvrir votre Dockerfile dans le dossier exercice-0.1 et remplacer le contenu du fichier par les instructions ci-dessous.
 ```
 # escape=`
 FROM windowsservercore

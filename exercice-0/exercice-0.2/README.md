@@ -1,4 +1,20 @@
 # Optimiser la vitesse de génération
+
+Exécutez **docker image build** pour exécuter les étapes dans le Dockerfile: 
+```
+docker image build -t docker image build -t <dockerId>/sample-1 .
+```
+L’image obtenue se compose de trois couches supplémentaires, une pour chaque instruction **RUN**.
+```
+docker history sample-1
+
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+a395ca26777f        15 seconds ago      cmd /S /C powershell.exe -Command Remove-Item   24.56 MB
+6c137f466d28        28 seconds ago      cmd /S /C powershell.exe -Command Start-Proce   178.6 MB
+957147160e8d        3 minutes ago       cmd /S /C powershell.exe -Command Invoke-WebR   125.7 MB
+
+```
+Ouvrir votre Dockerfile dans le dossier exercice-0.2 et remplacer le contenu du fichier par les instructions ci-dessous.
 ```
 # escape=`
 FROM windowsservercore
