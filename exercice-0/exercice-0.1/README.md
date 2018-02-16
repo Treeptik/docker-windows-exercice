@@ -29,14 +29,10 @@ Exécutez **docker image build** pour exécuter les étapes dans le Dockerfile:
 ```
 docker image build -t docker image build -t <dockerId>/example-2 .
 ```
-L’image obtenue se compose de quatre couches:
+Image obtenue ici se compose d’une couche.
 ```
-docker history doc-sample-2
+docker history example-2
 
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
-ddf43b1f3751        6 days ago          cmd /S /C powershell -Command  Sleep 2 ;  Inv   127.2 MB
-d43abb81204a        7 days ago          cmd /S /C powershell -Command  Sleep 2 ;  Inv   66.46 MB
-7a21073861a1        7 days ago          cmd /S /C powershell -Command  Sleep 2 ;  Inv   115.8 MB
-6801d964fda5        5 months ago
+69e44f37c748        54 seconds ago      cmd /S /C powershell.exe -Command   $ErrorAct   216.3 MB  
 ```
-Pourquoi allons-nous préférer cette organisation dans le Dockerfile ?
