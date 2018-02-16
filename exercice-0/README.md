@@ -14,7 +14,7 @@ a395ca26777f        15 seconds ago      cmd /S /C powershell.exe -Command Remove
 957147160e8d        3 minutes ago       cmd /S /C powershell.exe -Command Invoke-WebR   125.7 MB
 
 ```
-’image obtenue ici se compose d’une couche
+Image obtenue ici se compose d’une couche
 ```
 docker history example-2
 
