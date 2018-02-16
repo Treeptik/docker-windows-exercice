@@ -1,4 +1,4 @@
-# exercice-1
+# Construire une image de site web simple
 
 Exécutez **docker image build** pour exécuter les étapes dans le Dockerfile: 
 ```
