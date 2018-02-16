@@ -6,8 +6,7 @@ docker image build -t docker image build -t <dockerId>/example-1 .
 ```
 L’image obtenue se compose de trois couches supplémentaires, une pour chaque instruction **RUN**.
 ```
-docker history doc-example-1
-
+docker history example-1
 
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
 a395ca26777f        15 seconds ago      cmd /S /C powershell.exe -Command Remove-Item   24.56 MB
@@ -15,10 +14,13 @@ a395ca26777f        15 seconds ago      cmd /S /C powershell.exe -Command Remove
 957147160e8d        3 minutes ago       cmd /S /C powershell.exe -Command Invoke-WebR   125.7 MB
 
 ```
-récupérer l'adresse IP du conteneur:
+’image obtenue ici se compose d’une couche
 ```
-$ip = docker container inspect --format '{{ .NetworkSettings.Networks.nat.IPAddress }}' app
-```
-vous pouvez ouvrir votre navigateur avec l'adresse IP du conteneur et voir le site ASP.NET:
+docker history example-2
 
-## Poussez vos images sur Docker Hub
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+69e44f37c748        54 seconds ago      cmd /S /C powershell.exe -Command   $ErrorAct   216.3 MB  
+```
+```
+docker image build -t docker image build -t <dockerId>/example-2 .
+```
