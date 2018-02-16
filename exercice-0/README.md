@@ -36,6 +36,3 @@ docker history example-2
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
 69e44f37c748        54 seconds ago      cmd /S /C powershell.exe -Command   $ErrorAct   216.3 MB  
 ```
-```
-docker image build -t docker image build -t <dockerId>/example-2 .
-```
