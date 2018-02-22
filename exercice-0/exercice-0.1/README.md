@@ -2,7 +2,7 @@
 
 Exécutez **docker image build** pour exécuter les étapes dans le Dockerfile: 
 ```
-docker image build -t docker image build -t <dockerId>/example-1 .
+docker image build -t <dockerId>/example-1 .
 ```
 L’image obtenue se compose de trois couches supplémentaires, une pour chaque instruction **RUN**.
 ```
@@ -27,7 +27,7 @@ RUN powershell.exe -Command `
 ```
 Exécutez **docker image build** pour exécuter les étapes dans le Dockerfile: 
 ```
-docker image build -t docker image build -t <dockerId>/example-2 .
+docker image build -t <dockerId>/example-2 .
 ```
 Image obtenue ici se compose d’une couche.
 ```
