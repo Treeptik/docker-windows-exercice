@@ -17,7 +17,7 @@ a395ca26777f        15 seconds ago      cmd /S /C powershell.exe -Command Remove
 Ouvrir votre Dockerfile dans le dossier exercice-0.2 et remplacer le contenu du fichier par les instructions ci-dessous.
 ```
 # escape=`
-FROM windowsservercore
+FROM microsoft/windowservercore
 
 RUN powershell -Command `
     $ErrorActionPreference = 'Stop'; `
