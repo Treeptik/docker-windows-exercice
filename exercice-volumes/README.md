@@ -11,13 +11,13 @@ la version de nginx pour Windows est considérée comme une version bêta.
 Exécutez docker image build pour exécuter les étapes dans le Dockerfile :
 
 ```
-docker image build -t <dockerId>/nginx:1.0 .
+docker image build -t <DockerId>/nginx:1.0 .
 ```
 
 Créez un conteneur qui utilise la nouvelle image que vous venez de créer :
 
 ```
-docker container run -d -p 80:80 --name nginx <dockerId>/nginx:1.0
+docker container run -d -p 80:80 --name nginx <DockerId>/nginx:1.0
 ```
 
 Affichez l'adresse IP du conteneur :
