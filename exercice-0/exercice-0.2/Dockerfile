@@ -1,5 +1,5 @@
 # escape=`
-FROM microsoft/windowservercore
+FROM microsoft/windowsservercore
 
 RUN powershell -Command `
 
