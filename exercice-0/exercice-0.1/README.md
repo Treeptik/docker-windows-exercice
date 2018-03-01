@@ -6,7 +6,7 @@ docker image build -t <dockerId>/example-1 .
 ```
 L’image obtenue se compose de trois couches supplémentaires, une pour chaque instruction **RUN**.
 ```
-docker history example-1
+docker history <dockerId>/example-1
 
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
 a395ca26777f        15 seconds ago      cmd /S /C powershell.exe -Command Remove-Item   24.56 MB
@@ -31,7 +31,7 @@ docker image build -t <dockerId>/example-2 .
 ```
 Image obtenue ici se compose d’une couche.
 ```
-docker history example-2
+docker history <dockerId>/example-2
 
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
 69e44f37c748        54 seconds ago      cmd /S /C powershell.exe -Command   $ErrorAct   216.3 MB  
