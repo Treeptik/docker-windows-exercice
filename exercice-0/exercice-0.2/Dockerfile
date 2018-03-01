@@ -5,9 +5,9 @@ RUN powershell -Command `
 
   # Download software ; `
 
-  wget https://www.apachelounge.com/download/VC11/binaries/httpd-2.4.18-win32-VC11.zip -OutFile c:\apache.zip ; `
+  wget https://www.apachelounge.com/download/VC15/binaries/httpd-2.4.29-Win32-VC15.zip -OutFile c:\apache.zip ; `
   wget "https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x86.exe" -OutFile c:\vcredist.exe ; `
-  wget -Uri http://windows.php.net/downloads/releases/php-5.5.33-Win32-VC11-x86.zip -OutFile c:\php.zip ; `
+  wget -Uri http://windows.php.net/downloads/releases/php-5.6.34-nts-Win32-VC11-x86.zip -OutFile c:\php.zip ; `
 
   # Install Software ; `
 
