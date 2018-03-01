@@ -52,5 +52,6 @@ d43abb81204a        7 days ago          cmd /S /C powershell -Command  Sleep 2 ;
 6801d964fda5        5 months ago
 ```
 Pourquoi allons-nous préférer cette organisation dans le Dockerfile ?
-
+<p align="center">
 ![alt text](https://github.com/Treeptik/docker-windows-exercice/blob/master/exercice-0/exercice-0.2/image/cache-dockerfile.png)
+</p>
