@@ -21,7 +21,7 @@ FROM microsoft/windowsservercore
 
 RUN powershell -Command `
     $ErrorActionPreference = 'Stop'; `
-    wget https://www.apachelounge.com/download/VC11/binaries/httpd-2.4.18-win32-VC11.zip -OutFile c:\apache.zip ; `
+    wget https://www.apachelounge.com/download/VC15/binaries/httpd-2.4.29-Win32-VC15.zip -OutFile c:\apache.zip ; `
     Expand-Archive -Path c:\apache.zip -DestinationPath c:\ ; `
     Remove-Item c:\apache.zip -Force
 
@@ -33,7 +33,7 @@ RUN powershell -Command `
 
 RUN powershell -Command `
     $ErrorActionPreference = 'Stop'; `
-    wget http://windows.php.net/downloads/releases/php-5.5.33-Win32-VC11-x86.zip -OutFile c:\php.zip ; `
+    wget http://windows.php.net/downloads/releases/php-5.6.34-nts-Win32-VC11-x86.zip -OutFile c:\php.zip ; `
     Expand-Archive -Path c:\php.zip -DestinationPath c:\php ; `
     Remove-Item c:\php.zip -Force
 ```
