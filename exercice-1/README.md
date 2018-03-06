@@ -1,6 +1,7 @@
 # Construire une image de site web simple
 
-Jetez un oeil à Dockerfile pour cette application, qui crée un simple site Web ASP.NET en cours d'exécution qui affiche le nom d'hôte du serveur. Il n'y a que deux instructions:
+Jetez un oeil à Dockerfile pour cette application, qui crée un simple site Web ASP.NET en cours d'exécution qui affiche le nom d'hôte du serveur. 
+Il n'y a que deux instructions:
 	
 * [FROM](https://docs.docker.com/engine/reference/builder/#from) - Spécifie l'image à utiliser comme point de départ pour cette image. 
 Microsoft / aspnet est une image détenue par Microsoft, qui vient avec IIS et ASP.NET installé sur Windows Server Core
