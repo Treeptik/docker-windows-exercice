@@ -55,4 +55,4 @@ Pourquoi allons-nous préférer cette organisation dans le Dockerfile ?
 
 Étant donné que chaque instruction ```RUN``` a été exécutée dans sa propre couche, les exécutions suivantes de ce fichier Dockerfile ou d’un ensemble identique d’instructions d’un autre fichier Dockerfile utilisent la couche d’image mise en cache, ce qui réduit le temps de génération.
 
-![alt text](https://github.com/Treeptik/docker-windows-exercice/tree/master/exercice-Dockerfile/opti-vitesse/image/cache-dockerfile.png)
+!(https://github.com/Treeptik/docker-windows-exercice/tree/master/exercice-Dockerfile/opti-vitesse/image/cache-dockerfile.png)
