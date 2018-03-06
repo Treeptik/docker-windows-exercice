@@ -4,7 +4,7 @@ Pour l'exemple suivant, le Dockerfile est une meilleure représentation d'un scri
 
 Ce sont les principales caractéristiques:
 	
-* [FROM](https://docs.docker.com/engine/reference/builder/#from) - L'image de base est microsoft/iis:windowsservercore, donc l'image va démarrer avec un déploiement Windows Server 2016 propre, avec IIS déjà installé.
+* [FROM](https://docs.docker.com/engine/reference/builder/#from) - L'image de base est ```microsoft/iis:windowsservercore```, donc l'image va démarrer avec un déploiement Windows Server 2016 propre, avec IIS déjà installé.
 * [SHELL](https://docs.docker.com/engine/reference/builder/#shell) - Utilisation de l'instruction SHELL pour basculer vers PowerShell lors de la création du Dockerfile, donc les commandes à exécuter sont toutes dans PowerShell.
 * Configuration d'IIS pour écrire toutes les sorties de journal dans un seul fichier, à l'aide de la commande ```Set-WebConfigurationProperty```.
 * [COPY](https://docs.docker.com/engine/reference/builder/#copy) - Copie du script de démarrage start.ps1 et les fichiers index.html de l'hôte dans l'image.
