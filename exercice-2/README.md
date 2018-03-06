@@ -10,3 +10,22 @@ Ce sont les principales caractéristiques:
 * [COPY](https://docs.docker.com/engine/reference/builder/#copy) - Copie du script de démarrage start.ps1 et les fichiers index.html de l'hôte dans l'image.
 * [SHELL](https://docs.docker.com/engine/reference/builder/#entrypoint) - Il spécifie start.ps1 comme ENTRYPOINT à exécuter lorsque les conteneurs démarrent. Le script démarre le service Windows IIS et relaie les entrées du fichier journal à la console
 * [HEALTHCHECK](https://docs.docker.com/engine/reference/builder/#healthcheck) - L'ajoute un HEALTHCHECK qui envoie une requête HTTP GET au site et renvoie s'il a obtenu un code de réponse 200
+
+Exécutez **docker image build** pour exécuter les étapes dans le Dockerfile: 
+```
+docker image build -t <dockerId>/tweet-app .
+```
+```
+docker container run -d -p 8080:80 --name tweet-app <dockerId>/tweet-app
+```
+récupérer l'adresse IP du conteneur:
+```
+docker container inspect --format '{{ .NetworkSettings.Networks.nat.IPAddress }}' tweet-app
+```
+vous pouvez ouvrir votre navigateur avec l'adresse IP du conteneur et voir le site :
+
+## Poussez vos images sur Docker Hub
+
+```
+docker image push <dockerId>/tweet-app
+```
