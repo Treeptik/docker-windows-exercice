@@ -1,0 +1,37 @@
+version: "3.1"
+
+services:
+  rng:
+    build: rng
+    networks:
+    - nat
+    ports:
+    - "8001:80"
+
+  hasher:
+    build: hasher
+    networks:
+    - nat
+    ports:
+    - "8002:80"
+
+  webui:
+    build: webui
+    networks:
+    - nat
+    ports:
+    - "8000:80"
+
+  redis:
+    image: redis:3.2-nanoserver
+    networks:
+    - nat
+
+  worker:
+    build: worker
+    networks:
+    - nat
+
+networks:
+  nat:
+    external: true
