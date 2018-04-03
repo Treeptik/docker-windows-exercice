@@ -2,11 +2,11 @@
 
 Exécutez **docker image build** pour exécuter les étapes dans le Dockerfile: 
 ```
-docker image build -t <dockerId>/sample-1 .
+docker image build -t <DockerId>/sample-1 .
 ```
 L’image obtenue se compose de trois couches supplémentaires, une pour chaque instruction **RUN**.
 ```
-docker history <dockerId>/sample-1
+docker history <DockerId>/sample-1
 
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
 a395ca26777f        15 seconds ago      cmd /S /C powershell.exe -Command Remove-Item   24.56 MB
@@ -39,11 +39,11 @@ RUN powershell -Command `
 ```
 Exécutez **docker image build** pour exécuter les étapes dans le Dockerfile: 
 ```
-docker image build -t <dockerId>/sample-2 .
+docker image build -t <DockerId>/sample-2 .
 ```
 L’image obtenue se compose de quatre couches:
 ```
-docker history <dockerId>/doc-sample-2
+docker history <DockerId>/doc-sample-2
 
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
 ddf43b1f3751        6 days ago          cmd /S /C powershell -Command  Sleep 2 ;  Inv   127.2 MB
