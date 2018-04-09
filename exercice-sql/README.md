@@ -16,6 +16,9 @@ docker container run -d -p 1433:1433 --name nerd-dinner-db <DockerId>/nerd-dinne
 ```
 docker container run -d -p 8081:80 --name nerd-dinner-web <DockerId>/nerd-dinner-web
 ```
+
 ![register-account](https://raw.githubusercontent.com/Treeptik/docker-windows-exercice/master/exercice-sql/image/register-account.PNG)
 ![sqlconnection](https://raw.githubusercontent.com/Treeptik/docker-windows-exercice/master/exercice-sql/image/sqlconnection.PNG)
+
+Ensuite, vous pouvez vous connecter à la base de données à l'aide d'un client SQL et interroger la table UserProfile. Vous verrez le nouvel utilisateur:
 ![db-NerdDinner](https://raw.githubusercontent.com/Treeptik/docker-windows-exercice/master/exercice-sql/image/db-NerdDinner.PNG)
