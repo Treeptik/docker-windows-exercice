@@ -17,7 +17,7 @@ docker container run -d -p 1433:1433 --name nerd-dinner-db <DockerId>/nerd-dinne
 docker container run -d -p 8081:80 --name nerd-dinner-web <DockerId>/nerd-dinner-web
 ```
 Accédez au conteneur Web. 
-Vous pouvez cliquer sur le bouton Register et enregistrer un compte:
+Vous pouvez cliquer sur le bouton **Register** et enregistrer un compte:
 ![register-account](https://raw.githubusercontent.com/Treeptik/docker-windows-exercice/master/exercice-sql/image/register-account.PNG)
 
 Sqlectron est un bon client SQL léger que vous pouvez utiliser pour vous connecter au conteneur:
